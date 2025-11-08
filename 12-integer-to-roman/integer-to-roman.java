@@ -17,13 +17,13 @@ class Solution {
 
         StringBuilder romanValue = new StringBuilder();
 
-        for (int i = 0; i < vocabulary.size(); i++){
+        for (int i : vocabulary.keySet()){
             if (num == 0){
                 break;
             }
-            while (num >= (int)vocabulary.keySet().toArray()[i]){
-                romanValue.append(vocabulary.values().toArray()[i]);
-                num -= (int)vocabulary.keySet().toArray()[i];
+            while (num >= i){
+                romanValue.append(vocabulary.get(i));
+                num -= i;
             }
         }
 
