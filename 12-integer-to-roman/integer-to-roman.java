@@ -15,18 +15,19 @@ class Solution {
         vocabulary.put(4, "IV");
         vocabulary.put(1, "I");
 
-        StringBuilder romanValue = new StringBuilder();
-
+        //StringBuilder romanValue = new StringBuilder();
+        String s = "";
+        
         for (int i : vocabulary.keySet()){
             if (num == 0){
                 break;
             }
             while (num >= i){
-                romanValue.append(vocabulary.get(i));
+                s += vocabulary.get(i);
                 num -= i;
             }
         }
 
-        return romanValue.toString();
+        return s;
     }
 }
