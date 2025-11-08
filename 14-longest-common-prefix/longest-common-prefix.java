@@ -2,7 +2,7 @@ class Solution {
     public String longestCommonPrefix(String[] strs) {
         String currentPrefix = "";
         String finalPrefix = "";
-        long count = Arrays.stream(strs).count();
+        long count = strs.length;
 
         for (int i = 0; i < strs[0].length(); i++){
             currentPrefix += strs[0].toCharArray()[i];
