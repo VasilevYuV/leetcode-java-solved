@@ -24,8 +24,7 @@ class Solution {
         }
         if (list2 != null){
             newList.next = list2;
-        }
-        if (list1 != null){
+        } else {
             newList.next = list1;
         }
         return head.next;
